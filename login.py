@@ -7,7 +7,7 @@ import time
 
 def login_test(url,email,password): 
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("window-size=1920,1080")
     driver = webdriver.Chrome(options=options)
     driver.get(url)  
@@ -29,7 +29,7 @@ def login_test(url,email,password):
 
 def forget_password_check(url,email,newpassword):
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    # options.add_argument("--headless")
     options.add_argument("window-size=1920,1080")
     driver = webdriver.Chrome(options=options)
     driver.get(url)  
@@ -59,8 +59,9 @@ def forget_password_check(url,email,newpassword):
 
 
 
-url = "https://beta.myfuturely.com/password_reset/"
+# url = "https://beta.myfuturely.com/password_reset/"
+url = "https://beta.myfuturely.com/login/"
 email = "mhaskesamadhan223@gmail.com"
-password = "Pass@12345"
-# login_test(url, email, password)
-forget_password_check(url, email,"Pass@123456")
+password = "Pass@123456"
+login_test(url, email, password)
+# forget_password_check(url, email,"Pass@123456")
